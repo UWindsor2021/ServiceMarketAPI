@@ -59,6 +59,7 @@ import {StarterRightSidebarTabsComponent} from "./starters/right-sidebar/starter
 import {StarterApplicationBasicComponent} from "./starters/application/starter-application-basic/starter-application-basic.component"
 import {StarterApplicationAdvancedComponent} from "./starters/application/starter-application-advanced/starter-application-advanced.component"
 import {StarterApplicationComplexComponent} from "./starters/application/starter-application-complex/starter-application-complex.component"
+import {RequestListComponent} from "./requests/request-list/request-list.component";
 
 const starterPages = [
   {
@@ -140,7 +141,7 @@ const routeForPages = [
     children: [
       {
         path: 'default',
-        component: DashboardDefaultComponent,
+        component: UserLayoutComponent,
         data: {
           breadcrumb: 'Default'
         },
@@ -482,6 +483,22 @@ const routeForPages = [
         component: ChangelogComponent,
         data: {
           breadcrumb: 'Changelog'
+        },
+      },
+    ]
+  },
+  {
+    path: 'requests',
+    component: RequestListComponent,
+    data: {
+      breadcrumb: 'Requests'
+    },
+    children: [
+      {
+        path: 'request-list',
+        component: RequestListComponent,
+        data: {
+          breadcrumb: 'Request List'
         },
       },
     ]

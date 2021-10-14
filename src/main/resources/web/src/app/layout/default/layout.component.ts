@@ -28,8 +28,154 @@ export class LayoutComponent implements OnInit, OnDestroy {
   public settingsVisible: boolean = false
   public searchVisible: boolean = false
   public lockScreenVisible: boolean = false
-
   public menu: Array<MenuType> = [
+    {
+      groupName: 'Service Provider',
+      opened: true,
+      children: [
+        {
+          name: 'Profile',
+          url: '/app/user/settings',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+        {
+          name: 'Requests',
+          url: '/app/requests/request-list',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: '34',
+          },
+        },
+        {
+          name: 'Offers',
+          url: '/app/dashboard/analytics',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+        },
+        {
+          name: 'Services',
+          url: '/app/dashboard/analytics',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+        },
+        {
+          name: 'Customer Reviews',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+        {
+          name: 'Logout',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+      ],
+    },
+    {
+      groupName: 'Service Seeker',
+      opened: true,
+      children: [
+        {
+          name: 'Profile',
+          url: '/app/user/settings',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+        {
+          name: 'Requests',
+          url: '/app/dashboard/analytics',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+        },
+        {
+          name: 'Offers',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+        {
+          name: 'Service Providers',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+        {
+          name: 'Logout',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+      ],
+    },
+    {
+      groupName: 'Administrator',
+      opened: true,
+      children: [
+        {
+          name: 'Account',
+          url: '/app/dashboard/default',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'home',
+          },
+        },
+        {
+          name: 'Service Providers',
+          url: '/app/dashboard/analytics',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'activity',
+          },
+        },
+        {
+          name: 'Service Seekers',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+        {
+          name: 'Logout',
+          url: '/app/dashboard/crypto',
+          prefix: {
+            type: 'ibm-icon',
+            name: 'analytics',
+          },
+        },
+      ],
+    }
+  ];
+
+  /* SM-Sample */
+  public menuBase: Array<MenuType> = [
     {
       groupName: 'DASHBOARDS',
       opened: true,
@@ -753,6 +899,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   constructor(private settingsService: SettingsService,
               private appMenuService: AppMenuService) {
+    //this.menu = [...this.menu, ...this.menuBase]
   }
 
   ngOnInit(): void {

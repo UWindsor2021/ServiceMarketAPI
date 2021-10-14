@@ -12,14 +12,13 @@
               <button routerLink="/app/application/welcome" ibmButton="ghost" size="sm"
                       class="bx--btn__icon--left -ml-2">
                 <svg class="bx--btn__icon" ibmIconArrowLeft size="20"></svg>
-                Back to dashboard screen
+                Back
               </button>
             </div>
             <div class="app-productive-heading-06 mb-4">
-              Getting started
+              Requests from Service Seekers
             </div>
-            <p class="app-body-short-01 mb-8">Experience Local Service Market platform by using guided walkthroughs &
-              videos</p>
+            <p class="app-body-short-01 mb-8">Find requests that you can provide for and send a good offer to take the job!</p>
             <div fxLayout="row">
               <ng-container *ngFor="let video of videos;trackBy:trackByFn">
                 <div fxFlex="350px" class="mr-4">
@@ -31,8 +30,8 @@
                       </ng-container>
                     </div>
                     <div class="app-card__content app-border-b">
-                      <div class="app-subtitle mb-1">TOPIC</div>
-                      <div class="app-productive-heading-02">{{video.topic}}</div>
+                      <div class="app-subtitle mb-1">CATEGORY</div>
+                      <div class="app-productive-heading-02">{{video.category}}</div>
                     </div>
                     <div class="app-card__content app-border-b">
                       <div class="app-subtitle mb-2">VIDEO</div>
@@ -51,8 +50,8 @@
                       </div>
                     </div>
                     <div class="app-card__content app-border-b">
-                      <div class="app-subtitle mb-1">page</div>
-                      <div class="app-productive-heading-02">{{video.page}}</div>
+                      <div class="app-subtitle mb-1">Posted</div>
+                      <div class="app-productive-heading-02">{{video.posted}}</div>
                     </div>
                     <div class="app-card__content">
                       <div class="app-subtitle mb-1">more info</div>

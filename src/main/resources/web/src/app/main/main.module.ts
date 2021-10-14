@@ -73,6 +73,7 @@ import { StarterRightSidebarTabsComponent } from './starters/right-sidebar/start
 import { StarterApplicationBasicComponent } from './starters/application/starter-application-basic/starter-application-basic.component';
 import { StarterApplicationAdvancedComponent } from './starters/application/starter-application-advanced/starter-application-advanced.component';
 import { StarterApplicationComplexComponent } from './starters/application/starter-application-complex/starter-application-complex.component'
+import {RequestListComponent} from "./requests/request-list/request-list.component";
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { StarterApplicationComplexComponent } from './starters/application/start
     UserBillingComponent,
     UserCreditcardComponent,
     UserTransactionsComponent,
+    RequestListComponent,
     TimelineComponent,
     ProfileComponent,
     PricingSimpleComponent,
