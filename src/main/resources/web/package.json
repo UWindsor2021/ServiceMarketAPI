@@ -44,6 +44,7 @@
     "carbon-components-angular": "^4.36.1",
     "echarts": "^4.9.0",
     "lodash": "^4.17.20",
+    "ng-starrating": "^1.0.20",
     "ngx-mask": "^11.1.4",
     "ngx-md": "^8.1.6",
     "ngx-router-animations": "0.0.9",
