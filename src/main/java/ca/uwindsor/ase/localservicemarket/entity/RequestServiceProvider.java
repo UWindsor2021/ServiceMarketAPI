@@ -1,25 +1,16 @@
 package ca.uwindsor.ase.localservicemarket.entity;
 
+public class RequestServiceProvider {
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "service_provider")
-public class ServiceProvider {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String name;
     private String title;
     private String description;
     private String volunteer;
     private String skill;
 
-    public ServiceProvider() {
-    }
 
-    public ServiceProvider( String name, String title, String description, String volunteer, String skill) {
-
+    public RequestServiceProvider(String name, String title, String description, String volunteer, String skill) {
         this.name = name;
         this.title = title;
         this.description = description;
@@ -27,12 +18,15 @@ public class ServiceProvider {
         this.skill = skill;
     }
 
-    public int getId() {
-        return id;
+    public RequestServiceProvider() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTitle() {
@@ -59,10 +53,6 @@ public class ServiceProvider {
         this.volunteer = volunteer;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String getSkill() {
         return skill;
     }
@@ -70,21 +60,4 @@ public class ServiceProvider {
     public void setSkill(String skill) {
         this.skill = skill;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    @Override
-    public String toString() {
-        return "ServiceProvider{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", volunteer='" + volunteer + '\'' +
-                '}';
-    }
 }
-

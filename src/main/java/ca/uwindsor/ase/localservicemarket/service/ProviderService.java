@@ -21,5 +21,10 @@ public class ProviderService {
         }
 
     }
+    public boolean addServiceProvider( ServiceProvider serviceProvider) {
+
+        serviceProviderRepository.save(serviceProvider);
+    return true;
+    }
 }
 
