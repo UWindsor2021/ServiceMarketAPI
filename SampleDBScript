@@ -1,0 +1,13 @@
+use test;
+CREATE TABLE all_requests(ID int primary key NOT NULL AUTO_INCREMENT,service CHAR(40), state CHAR(40),
+service_provider CHAR(50));
+
+
+
+Select * from all_requests;
+
+
+
+INSERT INTO all_requests VALUES('1','Food','done','Uber');
+INSERT INTO all_requests VALUES('2','Wine','approved','Doordash');
+INSERT INTO all_requests VALUES('3','Clothes','In Progress','Forever21');
