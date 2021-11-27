@@ -1,9 +1,11 @@
 package ca.uwindsor.ase.localservicemarket.controller;
 
 import ca.uwindsor.ase.localservicemarket.entity.RequestServiceProvider;
+import ca.uwindsor.ase.localservicemarket.entity.ResponceServices;
 import ca.uwindsor.ase.localservicemarket.entity.ServiceProvider;
 import ca.uwindsor.ase.localservicemarket.repository.ServiceProviderRepository;
 import ca.uwindsor.ase.localservicemarket.service.ProviderService;
+import ca.uwindsor.ase.localservicemarket.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/")
@@ -35,4 +38,13 @@ public class ServiceProviderController {
            return new ResponseEntity<>(serviceProvider,HttpStatus.OK);
     }
 
+    @Autowired
+    public TestService testService;
+
+    @GetMapping("/getServices")
+    public List<ResponceServices> test () {
+        System.out.println(" in test method oof controller");
+        return testService.getallServices();
+
+    }
 }
